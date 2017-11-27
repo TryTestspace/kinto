@@ -179,6 +179,7 @@ def default_bucket_id(request):
 def get_user_info(request):
     user_info = {
         'id': request.prefixed_userid,
+        'principals': request.prefixed_principals,
         'bucket': request.default_bucket_id
     }
     return user_info
